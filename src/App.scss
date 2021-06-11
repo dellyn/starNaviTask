@@ -1,0 +1,98 @@
+$test: rgb(235, 252, 255);
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Montserrat";
+}
+h1 {
+  margin-bottom: 20px;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0 auto;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  &-dash {
+    display: flex;
+    justify-content: center;
+  }
+}
+.hover-squares {
+  margin-left: 40px;
+  padding-right: 20px;
+  .title {
+    margin-bottom: 15px;
+  }
+  .scroll {
+    height: 355px;
+
+    overflow-y: scroll;
+    &-item {
+      margin: 2px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: $test;
+    }
+  }
+}
+.matrix {
+  display: flex;
+  flex-wrap: wrap;
+  background: #000428;
+  background: -webkit-linear-gradient(to bottom, #000428, #004e92);
+  background: linear-gradient(to bottom, #000428, #004e92);
+  .square {
+    background: transparent;
+    border: 1px solid #000;
+    display: block;
+    box-sizing: border-box;
+    &.active {
+      background-color: $test;
+    }
+  }
+}
+
+.select-mode {
+  width: 120px;
+  padding: 5px;
+  outline: none;
+  margin: 20px 0px 40px 0px;
+  &.option {
+    padding: 4px;
+  }
+}
+
+.start-btn {
+  padding: 5px;
+  width: 80px;
+  margin-left: 15px;
+  background-color: #004e92;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #e1e1e1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #a7b4ba;
+  border-radius: 2px;
+}
+::-webkit-scrollbar {
+  height: 5px;
+  width: 7px;
+}
